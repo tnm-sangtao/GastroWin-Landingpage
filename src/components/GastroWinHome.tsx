@@ -841,42 +841,9 @@ export default function GastroWinHome({
                 {getTranslation("hero.btnTrial")}
                 <ArrowRight className="w-4 h-4" />
               </button>
-              <button
-                onClick={onNavigateToTool}
-                className="bg-white hover:bg-slate-50 text-slate-800 border border-slate-200/80 text-xs sm:text-sm font-semibold px-7 py-4 rounded-full shadow-2xs hover:shadow-xs transition-all duration-200 cursor-pointer flex items-center justify-center gap-1.5"
-              >
-                {getTranslation("hero.btnDemo")}
-                <span className="text-slate-400 group-hover:translate-x-0.5 transition-transform">→</span>
-              </button>
             </div>
 
-            {/* High Contrast Growth Stats Bar */}
-            <div className="grid grid-cols-3 gap-6 sm:gap-10 mt-12 pt-8 border-t border-slate-100/80 text-left w-full sm:w-auto">
-              <div>
-                <span className="block text-[24px] font-bold text-slate-950 tracking-tight">
-                  {venueCount.toLocaleString()}+
-                </span>
-                <span className="text-[14px] sm:text-[11px] font-light text-slate-400 mt-0.5 block leading-tight">
-                  {getTranslation("hero.statVenues")}
-                </span>
-              </div>
-              <div>
-                <span className="block text-[24px] font-bold text-slate-950 tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-500">
-                  +32%
-                </span>
-                <span className="text-[14px] sm:text-[11px] font-light text-slate-400 mt-0.5 block leading-tight">
-                  {getTranslation("hero.statGrowth")}
-                </span>
-              </div>
-              <div>
-                <span className="block text-[24px] font-bold text-slate-950 tracking-tight">
-                  {getTranslation("hero.statSavedVal")}
-                </span>
-                <span className="text-[14px] sm:text-[11px] font-light text-slate-400 mt-0.5 block leading-tight">
-                  {getTranslation("hero.statSaved")}
-                </span>
-              </div>
-            </div>
+
 
           </div>
 
