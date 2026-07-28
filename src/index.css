@@ -1,0 +1,208 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Poppins", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-poppins: "Poppins", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  /* Primary brand color - Purple 7553FF */
+  --color-brand: #7553FF;
+  --color-brand-hover: #5F3DEB;
+  --color-brand-light: #F2EEFF;
+  --color-brand-dark: #3B2A99;
+
+  /* Redefine gray/slate colors to #646464 for sub content text */
+  --color-slate-300: #646464;
+  --color-slate-400: #646464;
+  --color-slate-500: #646464;
+  --color-slate-600: #646464;
+  
+  --color-gray-300: #646464;
+  --color-gray-400: #646464;
+  --color-gray-500: #646464;
+  --color-gray-600: #646464;
+}
+
+/* Custom visual styles typical of top Dribbble portfolios */
+@layer utilities {
+  .glow-purple {
+    box-shadow: 0 0 40px -10px rgba(117, 83, 255, 0.4);
+  }
+  .glow-purple-lg {
+    box-shadow: 0 0 60px -5px rgba(117, 83, 255, 0.35);
+  }
+  .bg-grid-pattern {
+    background-size: 40px 40px;
+    background-image: 
+      linear-gradient(to right, rgba(117, 83, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(117, 83, 255, 0.03) 1px, transparent 1px);
+  }
+}
+
+/* Base custom styles */
+body {
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  background-color: #FFFFFF;
+  color: #0F172A; /* Deep slate */
+}
+
+/* Force all h1 and h2 headings to be semibold (font-weight: 600) on all pages */
+h1, h2, .h1, .h2 {
+  font-weight: 600 !important;
+}
+
+/* Force all h3 and h4 headings to be medium (font-weight: 500) on all pages */
+h3, h4, .h3, .h4 {
+  font-weight: 500 !important;
+}
+
+/* 
+  Sub content text style overrides:
+  Force sub-content text colors to #646464 and font-weight to light (300)
+*/
+p,
+.text-slate-300,
+.text-slate-400,
+.text-slate-500,
+.text-slate-600,
+.text-gray-300,
+.text-gray-400,
+.text-gray-500,
+.text-gray-600,
+.text-zinc-400,
+.text-zinc-500,
+.text-zinc-600,
+.text-neutral-400,
+.text-neutral-500,
+.text-neutral-600 {
+  color: #646464 !important;
+  font-weight: 300 !important;
+}
+
+/* Clear overrides for white / light text colors to restore high contrast on dark backgrounds */
+.text-white,
+p.text-white,
+span.text-white,
+h1.text-white,
+h2.text-white,
+h3.text-white {
+  color: #ffffff !important;
+}
+
+.text-slate-50,
+p.text-slate-50,
+span.text-slate-50 {
+  color: #f8fafc !important;
+}
+
+.text-slate-100,
+p.text-slate-100,
+span.text-slate-100 {
+  color: #f1f5f9 !important;
+}
+
+.text-slate-200,
+p.text-slate-200,
+span.text-slate-200 {
+  color: #e2e8f0 !important;
+}
+
+/* Ensure font-normal and font-medium classes are respected */
+.font-normal {
+  font-weight: 400 !important;
+}
+
+.font-medium {
+  font-weight: 500 !important;
+}
+
+/* 
+  Font-weight Constraints:
+  - Font weight lớn nhất là Semibold (600) (Chỉ áp dụng cho các Heading lớn)
+  - Những thành phần còn lại chỉ áp dụng font weight lớn nhất là Medium (500)
+*/
+.font-semibold,
+.font-bold,
+.font-extrabold,
+.font-black,
+strong,
+b {
+  font-weight: 500 !important;
+}
+
+/* Ensure large headings, prices, stats still get 600 (Semibold) */
+h1 .font-semibold, h1 .font-bold, h1 .font-extrabold, h1 strong,
+h2 .font-semibold, h2 .font-bold, h2 .font-extrabold, h2 strong,
+.text-3xl, .text-4xl, .text-5xl, .text-6xl, .text-7xl,
+.stat-number, .price, .pricing-price, .price-number, [class*="text-[3"], [class*="text-[4"], [class*="text-[5"], [class*="text-[6"], [class*="text-[7"] {
+  font-weight: 600 !important;
+}
+
+/* 
+  Font-size scale rules:
+  1. Any text content currently smaller than 14px is upgraded to 14px (text-xs, and text-[8px...13px])
+  2. Any text content currently at 14px is upgraded to 16px (text-sm, and text-[14px])
+*/
+.text-xs,
+[class*="text-[8px]"],
+[class*="text-[9px]"],
+[class*="text-[10px]"],
+[class*="text-[11px]"],
+[class*="text-[12px]"],
+[class*="text-[13px]"] {
+  font-size: 14px !important;
+}
+
+.text-sm,
+[class*="text-[14px]"],
+[class*="text-[15px]"] {
+  font-size: 16px !important;
+}
+
+p, li {
+  font-size: 16px !important;
+}
+
+/* 
+  Specific overrides for menu/navigation badges ("Interactive" / "Live") 
+  to make them perfectly balanced, crisp, and compact in compliance with 
+  DESIGN.md (14px minimum size, 500/Medium maximum weight).
+*/
+.nav-badge,
+.nav-badge-purple {
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  line-height: 1.2 !important;
+  padding: 4px 8px !important;
+  border-radius: 6px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  letter-spacing: 0.12em !important;
+}
+
+.nav-badge {
+  color: #7553FF !important;
+  background-color: #F2EEFF !important;
+}
+
+.nav-badge-purple {
+  color: #7553FF !important;
+  background-color: #F3E8FF !important;
+}
+
+/* 
+  Button Radius Constraint:
+  Force all buttons, elements with role="button", and button classes to have a border-radius of 999px.
+*/
+button,
+.btn,
+.button,
+[role="button"],
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+  border-radius: 999px !important;
+}
+

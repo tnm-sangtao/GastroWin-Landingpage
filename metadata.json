@@ -1,0 +1,8 @@
+{
+  "name": "Landing page GastroHug - 03/07/2026",
+  "description": "High-converting SaaS landing page for an AI-powered restaurant menu translation tool, featuring a highly-polished interactive demo, pricing calculator, and localized translation preview.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
