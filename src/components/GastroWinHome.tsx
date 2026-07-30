@@ -1325,18 +1325,14 @@ export default function GastroWinHome({
                             referrerPolicy="no-referrer"
                           />
                           <div>
+                            <div className="text-sm font-semibold text-white">
+                              {getTranslation(item.authorKey)}
+                            </div>
                             <div className="text-sm text-white/70 font-light mt-0.5">
                               {getTranslation(item.roleKey)}
                             </div>
                           </div>
                         </div>
-                      </div>
-
-                      {/* Small floating button inside the card */}
-                      <div className="w-12 h-12 rounded-full border border-white/20 bg-white/10 backdrop-blur-md flex items-center justify-center text-white shrink-0 shadow-lg animate-pulse lg:flex hidden">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M7 17L17 7M17 7H9M17 7V15" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                        </svg>
                       </div>
                     </div>
                   </div>

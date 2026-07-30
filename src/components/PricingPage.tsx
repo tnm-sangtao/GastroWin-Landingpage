@@ -6,7 +6,7 @@
 import React, { useState } from "react";
 import { motion } from "motion/react";
 import { useLanguage } from "../context/LanguageContext";
-import { Check, ArrowRight } from "lucide-react";
+import { Check, ArrowRight, ShieldCheck } from "lucide-react";
 
 interface PricingPageProps {
   onBackToHome: () => void;
@@ -68,7 +68,7 @@ export default function PricingPage({ onBackToHome, onSelectPlan }: PricingPageP
         >
           {/* Card 1: Free Plan */}
           <div className="bg-white border border-slate-200/90 rounded-[24px] p-4 flex flex-col justify-between shadow-xs hover:shadow-md transition-all duration-300">
-            <div>
+            <div className="flex-1 flex flex-col">
               <h3 className="text-2xl font-bold text-slate-900 mb-3 tracking-tight">
                 {lang === "vi" ? "Miễn phí" : lang === "de" ? "Kostenlos" : "Free"}
               </h3>
@@ -84,16 +84,9 @@ export default function PricingPage({ onBackToHome, onSelectPlan }: PricingPageP
                   ? "Beginnen Sie mit der Digitalisierung Ihres Restaurants — keine Kreditkarte erforderlich" 
                   : "Start digitizing your restaurant — no credit card required"}
               </p>
-              <button
-                onClick={() => handleSelect(lang === "vi" ? "Miễn phí" : lang === "de" ? "Kostenlos" : "Free")}
-                className="w-full border border-[#7553FF]/60 hover:border-[#7553FF] text-[#7553FF] hover:bg-[#7553FF]/5 text-sm font-medium py-2.5 px-4 rounded-xl cursor-pointer transition-all flex items-center justify-center gap-1.5 mb-8"
-              >
-                <span>{lang === "vi" ? "Bắt đầu miễn phí" : lang === "de" ? "Kostenlos starten" : "Start for free"}</span>
-                <ArrowRight className="w-4 h-4" />
-              </button>
 
               {/* Feature List */}
-              <div className="space-y-3.5 pt-2">
+              <div className="space-y-3.5 pt-4 border-t border-slate-200/80 mb-8">
                 {[
                   {
                     en: "300 AI Generations included",
@@ -150,11 +143,19 @@ export default function PricingPage({ onBackToHome, onSelectPlan }: PricingPageP
                 ))}
               </div>
             </div>
+
+            <button
+              onClick={() => handleSelect(lang === "vi" ? "Miễn phí" : lang === "de" ? "Kostenlos" : "Free")}
+              className="w-full border border-[#7553FF]/60 hover:border-[#7553FF] text-[#7553FF] hover:bg-[#7553FF]/5 text-sm font-medium py-2.5 px-4 rounded-xl cursor-pointer transition-all flex items-center justify-center gap-1.5 mt-auto"
+            >
+              <span>{lang === "vi" ? "Bắt đầu miễn phí" : lang === "de" ? "Kostenlos starten" : "Start for free"}</span>
+              <ArrowRight className="w-4 h-4" />
+            </button>
           </div>
 
           {/* Card 2: Basic Plan */}
           <div className="bg-white border border-slate-200/90 rounded-[24px] p-4 flex flex-col justify-between shadow-xs hover:shadow-md transition-all duration-300">
-            <div>
+            <div className="flex-1 flex flex-col">
               <h3 className="text-2xl font-bold text-slate-900 mb-3 tracking-tight">
                 {lang === "vi" ? "Cơ bản" : lang === "de" ? "Basis" : "Basic"}
               </h3>
@@ -173,16 +174,9 @@ export default function PricingPage({ onBackToHome, onSelectPlan }: PricingPageP
                   ? "Alles, was Sie für den Betrieb eines professionellen Restaurants benötigen" 
                   : "Everything you need to run a professional restaurant"}
               </p>
-              <button
-                onClick={() => handleSelect(lang === "vi" ? "Cơ bản" : lang === "de" ? "Basis" : "Basic")}
-                className="w-full border border-[#7553FF]/60 hover:border-[#7553FF] text-[#7553FF] hover:bg-[#7553FF]/5 text-sm font-medium py-2.5 px-4 rounded-xl cursor-pointer transition-all flex items-center justify-center gap-1.5 mb-8"
-              >
-                <span>{lang === "vi" ? "Bắt đầu ngay" : lang === "de" ? "Jetzt starten" : "Get started"}</span>
-                <ArrowRight className="w-4 h-4" />
-              </button>
 
               {/* Feature List */}
-              <div className="space-y-3.5 pt-2">
+              <div className="space-y-3.5 pt-4 border-t border-slate-200/80 mb-8">
                 {[
                   {
                     en: "600 AI Generations/month",
@@ -259,111 +253,122 @@ export default function PricingPage({ onBackToHome, onSelectPlan }: PricingPageP
                 ))}
               </div>
             </div>
+
+            <button
+              onClick={() => handleSelect(lang === "vi" ? "Cơ bản" : lang === "de" ? "Basis" : "Basic")}
+              className="w-full border border-[#7553FF]/60 hover:border-[#7553FF] text-[#7553FF] hover:bg-[#7553FF]/5 text-sm font-medium py-2.5 px-4 rounded-xl cursor-pointer transition-all flex items-center justify-center gap-1.5 mt-auto"
+            >
+              <span>{lang === "vi" ? "Bắt đầu ngay" : lang === "de" ? "Jetzt starten" : "Get started"}</span>
+              <ArrowRight className="w-4 h-4" />
+            </button>
           </div>
 
           {/* Card 3: Gold Plan (Highlighted Popular) */}
           <div className="bg-white border border-[#7553FF] rounded-[24px] p-4 flex flex-col justify-between drop-shadow-[0_5px_5px_rgba(118,81,252,0.2)] hover:shadow-lg transition-all duration-300 relative overflow-hidden bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-[#DDD0FF] via-[#F6F2FF] to-white">
             <div className="absolute -top-12 -right-12 w-52 h-52 bg-[#7553FF]/20 rounded-full blur-2xl pointer-events-none" />
-            <div className="relative z-10">
-              <div className="flex items-center justify-between mb-3">
-                <h3 className="text-2xl font-bold text-slate-900 tracking-tight">
-                  {lang === "vi" ? "Vàng" : lang === "de" ? "Gold" : "Gold"}
-                </h3>
-                <span className="inline-flex items-center px-3 py-1 rounded-md text-xs font-semibold bg-[#6D42F8] text-white">
-                  {lang === "vi" ? "Phổ biến nhất" : lang === "de" ? "Beliebtest" : "Most Popular"}
-                </span>
+            <div className="relative z-10 flex-1 flex flex-col justify-between">
+              <div className="flex-1 flex flex-col">
+                <div className="flex items-center justify-between mb-3">
+                  <h3 className="text-2xl font-bold text-slate-900 tracking-tight">
+                    {lang === "vi" ? "Vàng" : lang === "de" ? "Gold" : "Gold"}
+                  </h3>
+                  <span className="inline-flex items-center px-3 py-1 rounded-md text-xs font-semibold bg-[#6D42F8] text-white">
+                    {lang === "vi" ? "Phổ biến nhất" : lang === "de" ? "Beliebtest" : "Most Popular"}
+                  </span>
+                </div>
+                <div className="flex items-baseline gap-1 mb-3">
+                  <span className="text-4xl lg:text-[40px] font-bold text-[#6D42F8] tracking-tight">
+                    ${isAnnual ? "99" : "119"}
+                  </span>
+                  <span className="text-sm text-slate-600 font-normal">
+                    {lang === "vi" ? "/tháng" : lang === "de" ? "/Monat" : "/month"}
+                  </span>
+                </div>
+                <p className="text-xs sm:text-sm text-slate-700 font-light leading-relaxed mb-6 min-h-[52px]">
+                  {lang === "vi" 
+                    ? "Tự động hóa quy trình vận hành và bứt phá tăng trưởng nhanh hơn" 
+                    : lang === "de" 
+                    ? "Automatisieren Sie Ihren Betrieb und wachsen Sie schneller" 
+                    : "Automate your operations and grow faster"}
+                </p>
+
+                {/* Feature List */}
+                <div className="space-y-3.5 pt-4 border-t border-[#7553FF]/20 mb-8">
+                  {[
+                    {
+                      en: "1,000 AI Generations/month",
+                      vi: "1.000 AI Generations/tháng",
+                      de: "1.000 KI-Generierungen/Monat"
+                    },
+                    {
+                      en: "Everything in Basic, plus:",
+                      vi: "Tất cả trong Cơ bản, cộng thêm:",
+                      de: "Alles aus Basis, plus:"
+                    },
+                    {
+                      en: "AI Shift Auto-Resolve",
+                      vi: "AI Shift Auto-Resolve",
+                      de: "KI-Schicht-Auto-Resolve"
+                    },
+                    {
+                      en: "GPS Branch Lock Check-in",
+                      vi: "Chấm công GPS Branch Lock",
+                      de: "GPS Branch Lock Check-in"
+                    },
+                    {
+                      en: "Payroll",
+                      vi: "Tính Lương tự động",
+                      de: "Lohnabrechnung"
+                    },
+                    {
+                      en: "AI Menu Translator (40+ languages)",
+                      vi: "AI Dịch Thực Đơn (40+ ngôn ngữ)",
+                      de: "KI-Menü-Übersetzer (40+ Sprachen)"
+                    },
+                    {
+                      en: "Allergen Analyzer",
+                      vi: "Allergen Analyzer",
+                      de: "Allergen-Analysator"
+                    },
+                    {
+                      en: "Social Content Scheduler",
+                      vi: "Lên lịch Social Content",
+                      de: "Social Content Scheduler"
+                    },
+                    {
+                      en: "Review Hub with Sentiment Filter",
+                      vi: "Review Hub với Lọc Cảm xúc",
+                      de: "Review Hub mit Sentiment-Filter"
+                    },
+                    {
+                      en: "SEO Google Maps Tracker",
+                      vi: "SEO Google Maps Tracker",
+                      de: "SEO Google Maps-Tracker"
+                    }
+                  ].map((feat, idx) => (
+                    <div key={idx} className="flex items-start gap-2.5 text-xs sm:text-[13px] text-slate-700 font-light">
+                      <Check className="w-3 h-3 text-slate-700 shrink-0 mt-0.5 stroke-[2.0]" />
+                      <span className="leading-snug">
+                        {lang === "vi" ? feat.vi : lang === "de" ? feat.de : feat.en}
+                      </span>
+                    </div>
+                  ))}
+                </div>
               </div>
-              <div className="flex items-baseline gap-1 mb-3">
-                <span className="text-4xl lg:text-[40px] font-bold text-[#6D42F8] tracking-tight">
-                  ${isAnnual ? "99" : "119"}
-                </span>
-                <span className="text-sm text-slate-600 font-normal">
-                  {lang === "vi" ? "/tháng" : lang === "de" ? "/Monat" : "/month"}
-                </span>
-              </div>
-              <p className="text-xs sm:text-sm text-slate-700 font-light leading-relaxed mb-6 min-h-[52px]">
-                {lang === "vi" 
-                  ? "Tự động hóa quy trình vận hành và bứt phá tăng trưởng nhanh hơn" 
-                  : lang === "de" 
-                  ? "Automatisieren Sie Ihren Betrieb und wachsen Sie schneller" 
-                  : "Automate your operations and grow faster"}
-              </p>
+
               <button
                 onClick={() => handleSelect(lang === "vi" ? "Vàng" : lang === "de" ? "Gold" : "Gold")}
-                className="w-full bg-[#6D42F8] hover:bg-[#5B30ED] text-white text-sm font-medium py-2.5 px-4 rounded-xl cursor-pointer transition-all flex items-center justify-center gap-1.5 mb-8 shadow-sm"
+                className="w-full bg-[#6D42F8] hover:bg-[#5B30ED] text-white text-sm font-medium py-2.5 px-4 rounded-xl cursor-pointer transition-all flex items-center justify-center gap-1.5 mt-auto shadow-sm"
               >
                 <span>{lang === "vi" ? "Bắt đầu ngay" : lang === "de" ? "Jetzt starten" : "Get started"}</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
-
-              {/* Feature List */}
-              <div className="space-y-3.5 pt-2">
-                {[
-                  {
-                    en: "1,000 AI Generations/month",
-                    vi: "1.000 AI Generations/tháng",
-                    de: "1.000 KI-Generierungen/Monat"
-                  },
-                  {
-                    en: "Everything in Basic, plus:",
-                    vi: "Tất cả trong Cơ bản, cộng thêm:",
-                    de: "Alles aus Basis, plus:"
-                  },
-                  {
-                    en: "AI Shift Auto-Resolve",
-                    vi: "AI Shift Auto-Resolve",
-                    de: "KI-Schicht-Auto-Resolve"
-                  },
-                  {
-                    en: "GPS Branch Lock Check-in",
-                    vi: "Chấm công GPS Branch Lock",
-                    de: "GPS Branch Lock Check-in"
-                  },
-                  {
-                    en: "Payroll",
-                    vi: "Tính Lương tự động",
-                    de: "Lohnabrechnung"
-                  },
-                  {
-                    en: "AI Menu Translator (40+ languages)",
-                    vi: "AI Dịch Thực Đơn (40+ ngôn ngữ)",
-                    de: "KI-Menü-Übersetzer (40+ Sprachen)"
-                  },
-                  {
-                    en: "Allergen Analyzer",
-                    vi: "Allergen Analyzer",
-                    de: "Allergen-Analysator"
-                  },
-                  {
-                    en: "Social Content Scheduler",
-                    vi: "Lên lịch Social Content",
-                    de: "Social Content Scheduler"
-                  },
-                  {
-                    en: "Review Hub with Sentiment Filter",
-                    vi: "Review Hub với Lọc Cảm xúc",
-                    de: "Review Hub mit Sentiment-Filter"
-                  },
-                  {
-                    en: "SEO Google Maps Tracker",
-                    vi: "SEO Google Maps Tracker",
-                    de: "SEO Google Maps-Tracker"
-                  }
-                ].map((feat, idx) => (
-                  <div key={idx} className="flex items-start gap-2.5 text-xs sm:text-[13px] text-slate-700 font-light">
-                    <Check className="w-3 h-3 text-slate-700 shrink-0 mt-0.5 stroke-[2.0]" />
-                    <span className="leading-snug">
-                      {lang === "vi" ? feat.vi : lang === "de" ? feat.de : feat.en}
-                    </span>
-                  </div>
-                ))}
-              </div>
             </div>
           </div>
 
           {/* Card 4: Diamond Plan */}
           <div className="bg-white border border-slate-200/90 rounded-[24px] p-4 flex flex-col justify-between shadow-xs hover:shadow-md transition-all duration-300">
-            <div>
+            <div className="flex-1 flex flex-col">
               <h3 className="text-2xl font-bold text-slate-900 mb-3 tracking-tight">
                 {lang === "vi" ? "Kim cương" : lang === "de" ? "Diamant" : "Diamond"}
               </h3>
@@ -382,16 +387,9 @@ export default function PricingPage({ onBackToHome, onSelectPlan }: PricingPageP
                   ? "Die komplette Suite für Restaurantketten mit mehreren Standorten" 
                   : "The complete suite for multi-location restaurant chains"}
               </p>
-              <button
-                onClick={() => handleSelect(lang === "vi" ? "Kim cương" : lang === "de" ? "Diamant" : "Diamond")}
-                className="w-full bg-slate-950 hover:bg-slate-800 text-white text-sm font-medium py-2.5 px-4 rounded-xl cursor-pointer transition-all flex items-center justify-center gap-1.5 mb-8 shadow-sm"
-              >
-                <span>{lang === "vi" ? "Bắt đầu ngay" : lang === "de" ? "Jetzt starten" : "Get started"}</span>
-                <ArrowRight className="w-4 h-4" />
-              </button>
 
               {/* Feature List */}
-              <div className="space-y-3.5 pt-2">
+              <div className="space-y-3.5 pt-4 border-t border-slate-200/80 mb-8">
                 {[
                   {
                     en: "3,000 AI Generations/month",
@@ -443,8 +441,32 @@ export default function PricingPage({ onBackToHome, onSelectPlan }: PricingPageP
                 ))}
               </div>
             </div>
+
+            <button
+              onClick={() => handleSelect(lang === "vi" ? "Kim cương" : lang === "de" ? "Diamant" : "Diamond")}
+              className="w-full bg-slate-950 hover:bg-slate-800 text-white text-sm font-medium py-2.5 px-4 rounded-xl cursor-pointer transition-all flex items-center justify-center gap-1.5 mt-auto shadow-sm"
+            >
+              <span>{lang === "vi" ? "Bắt đầu ngay" : lang === "de" ? "Jetzt starten" : "Get started"}</span>
+              <ArrowRight className="w-4 h-4" />
+            </button>
           </div>
         </motion.div>
+
+        {/* Guarantee & Trust Banner */}
+        <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-xs sm:text-sm text-slate-500 font-light mt-8 sm:mt-10 text-center">
+          <ShieldCheck className="w-4 h-4 sm:w-5 sm:h-5 text-[#7553FF] shrink-0" />
+          <span>
+            {lang === "vi" ? "Dùng thử miễn phí 14 ngày cho tất cả gói trả phí" : lang === "de" ? "14 Tage kostenlos testen für alle kostenpflichtigen Tarife" : "14-day free trial on all paid plans"}
+          </span>
+          <span className="text-slate-300 hidden sm:inline">•</span>
+          <span>
+            {lang === "vi" ? "Hủy bất kỳ lúc nào" : lang === "de" ? "Jederzeit kündbar" : "Cancel anytime"}
+          </span>
+          <span className="text-slate-300 hidden sm:inline">•</span>
+          <span>
+            {lang === "vi" ? "Cài đặt an toàn & dễ dàng" : lang === "de" ? "Sichere & einfache Einrichtung" : "Secure & easy setup"}
+          </span>
+        </div>
       </div>
     </div>
   );
