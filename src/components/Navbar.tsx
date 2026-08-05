@@ -45,7 +45,7 @@ import {
 interface NavbarProps {
   onScrollToSection: (sectionId: string) => void;
   onOpenDemo: () => void;
-  currentView?: "landing" | "tool" | "food-images" | "price-update" | "qr-menu" | "allergen-intel" | "shift-planner" | "attendance-checkin" | "payroll-reconciliation" | "leave-manager" | "staff-roles" | "booking" | "social-auto-post" | "seo-snapshot" | "review-responder" | "campaign-engine" | "pricing" | "contact" | "catering" | "loyawin";
+  currentView?: "landing" | "tool" | "food-images" | "price-update" | "qr-menu" | "allergen-intel" | "shift-planner" | "attendance-checkin" | "payroll-reconciliation" | "leave-manager" | "staff-roles" | "booking" | "social-auto-post" | "seo-snapshot" | "review-responder" | "campaign-engine" | "pricing" | "contact" | "catering" | "loyawin" | "marketing-tools";
   onNavigateHome?: () => void;
   onNavigateToFoodImages?: () => void;
   onNavigateToPriceUpdater?: () => void;
@@ -65,6 +65,7 @@ interface NavbarProps {
   onNavigateToContact?: () => void;
   onNavigateToCatering?: () => void;
   onNavigateToLoyaWin?: () => void;
+  onNavigateToMarketingTools?: () => void;
   showCookieConsent?: boolean;
 }
 
@@ -164,7 +165,7 @@ const SETTINGS_ITEMS: NavDropdownItem[] = [
   { id: "admin-approval", label: "module.admin_approval.title", desc: "module.admin_approval.desc", icon: CheckSquare, color: "bg-emerald-500/10 text-emerald-600" }
 ];
 
-export default function Navbar({ onScrollToSection, onOpenDemo, currentView, onNavigateHome, onNavigateToFoodImages, onNavigateToPriceUpdater, onNavigateToSmartQRMenu, onNavigateToAllergenAnalyzer, onNavigateToShiftPlanner, onNavigateToAttendanceCheckin, onNavigateToPayrollReconciliation, onNavigateToLeaveManager, onNavigateToStaffRoles, onNavigateToBooking, onNavigateToSocialAutoPost, onNavigateToLocalSEOSnapshot, onNavigateToReviewResponder, onNavigateToCampaignEngine, onNavigateToPricing, onNavigateToContact, onNavigateToCatering, onNavigateToLoyaWin, showCookieConsent }: NavbarProps) {
+export default function Navbar({ onScrollToSection, onOpenDemo, currentView, onNavigateHome, onNavigateToFoodImages, onNavigateToPriceUpdater, onNavigateToSmartQRMenu, onNavigateToAllergenAnalyzer, onNavigateToShiftPlanner, onNavigateToAttendanceCheckin, onNavigateToPayrollReconciliation, onNavigateToLeaveManager, onNavigateToStaffRoles, onNavigateToBooking, onNavigateToSocialAutoPost, onNavigateToLocalSEOSnapshot, onNavigateToReviewResponder, onNavigateToCampaignEngine, onNavigateToPricing, onNavigateToContact, onNavigateToCatering, onNavigateToLoyaWin, onNavigateToMarketingTools, showCookieConsent }: NavbarProps) {
   const { lang, setLang, t } = useLanguage();
   
   const isProductActive = currentView && [
@@ -174,7 +175,7 @@ export default function Navbar({ onScrollToSection, onOpenDemo, currentView, onN
   ].includes(currentView);
 
   const isEcosystemActive = currentView && [
-    "social-auto-post", "seo-snapshot", "review-responder", "campaign-engine", "loyawin"
+    "marketing-tools", "social-auto-post", "seo-snapshot", "review-responder", "campaign-engine", "loyawin"
   ].includes(currentView);
 
   const isPricingActive = currentView === "pricing";
@@ -509,9 +510,9 @@ export default function Navbar({ onScrollToSection, onOpenDemo, currentView, onN
               className="flex items-center gap-2.5 cursor-pointer select-none group"
             >
               <img 
-                src="https://res.cloudinary.com/dhpimajwu/image/upload/v1782449825/Frame_1321319903_pq9rhx.png" 
+                src="https://i.postimg.cc/zGw85gbr/Gastrowinlogo.png" 
                 alt="GastroWin" 
-                className="h-14 w-auto object-contain" 
+                className="h-10 w-auto object-contain" 
                 referrerPolicy="no-referrer"
               />
             </div>
@@ -639,11 +640,12 @@ export default function Navbar({ onScrollToSection, onOpenDemo, currentView, onN
 
                         {/* Marketing Tools */}
                         {(() => {
-                          const isMarketingActive = currentView && ["social-auto-post", "seo-snapshot", "review-responder", "campaign-engine"].includes(currentView);
+                          const isMarketingActive = currentView === "marketing-tools";
                           return (
                             <div 
                               onClick={() => {
-                                if (onNavigateToSocialAutoPost) onNavigateToSocialAutoPost();
+                                if (onNavigateToMarketingTools) onNavigateToMarketingTools();
+                                else if (onNavigateToSocialAutoPost) onNavigateToSocialAutoPost();
                                 else onOpenDemo();
                                 setActiveDropdown(null);
                               }}
@@ -1241,7 +1243,8 @@ export default function Navbar({ onScrollToSection, onOpenDemo, currentView, onN
 
                   <div 
                     onClick={() => {
-                      if (onNavigateToSocialAutoPost) onNavigateToSocialAutoPost();
+                      if (onNavigateToMarketingTools) onNavigateToMarketingTools();
+                      else if (onNavigateToSocialAutoPost) onNavigateToSocialAutoPost();
                       else onOpenDemo();
                       setMobileMenuOpen(false);
                     }}
@@ -1334,7 +1337,7 @@ export default function Navbar({ onScrollToSection, onOpenDemo, currentView, onN
             <div className="bg-gradient-to-r from-[#7553FF] via-[#7553FF] to-[#562DFF] via-[#562DFF] p-4 text-white flex items-center justify-between">
               <div className="flex items-center gap-2.5">
                 <img 
-                  src="https://i.postimg.cc/3Jtt39pQ/logo1.png" 
+                  src="https://i.postimg.cc/qvc403hV/onlylogo.png" 
                   alt="GastroWin Assistant Logo" 
                   className="w-8 h-8" 
                   referrerPolicy="no-referrer"
@@ -1453,7 +1456,8 @@ export default function Navbar({ onScrollToSection, onOpenDemo, currentView, onN
         }`}
       >
         {chatbotPng ? (
-          <img src="https://i.postimg.cc/tJH0C6KL/logobg.png" className="w-5 h-5 select-none flex-shrink-0 object-contain" />
+          <img src="https://i.postimg.cc/qvc403hV/onlylogo.png" 
+          className="w-5 h-5 select-none flex-shrink-0 object-contain" />
         ) : (
           <div className="w-5 h-5 flex-shrink-0" />
         )}

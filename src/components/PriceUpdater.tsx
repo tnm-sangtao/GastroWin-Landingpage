@@ -231,7 +231,7 @@ export default function PriceUpdater({ onBackToHome }: { onBackToHome: () => voi
           <div className="lg:col-span-7 text-left flex flex-col items-start relative z-10">
 
 
-            <h1 className="text-4xl sm:text-5xl lg:text-[64px] font-semibold text-slate-950 tracking-tight leading-none lg:leading-[64px] mb-6">
+            <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-semibold text-slate-950 tracking-tight leading-none lg:leading-[56px] mb-6">
               <span className="block whitespace-nowrap">
                 {t("Update menu", "Cập nhật", "Menü-")}
               </span>
@@ -287,7 +287,7 @@ export default function PriceUpdater({ onBackToHome }: { onBackToHome: () => voi
             {/* Beautiful Image Container */}
             <div className="relative w-full max-w-lg">
               <img
-                src="https://i.postimg.cc/DZv0tvLK/Updatemenu.png"
+                src="https://i.postimg.cc/zvWqYjfS/Updatemenugastrowin.png"
                 alt="Price Update Illustration"
                 className="w-full h-auto rounded-xl object-cover scale-135 drop-shadow-[0_10px_20px_rgba(118,81,252,0.2)]"
                 referrerPolicy="no-referrer"

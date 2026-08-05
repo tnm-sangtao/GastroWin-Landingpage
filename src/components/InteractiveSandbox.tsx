@@ -347,7 +347,7 @@ export default function InteractiveSandbox({ onBackToHome }: InteractiveSandboxP
           <div className="lg:col-span-6 text-left flex flex-col items-start relative z-10">
 
 
-            <h1 className="text-4xl sm:text-5xl lg:text-[64px] font-semibold text-slate-950 tracking-tight leading-none lg:leading-[64px] mb-6 font-poppins">
+            <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-semibold text-slate-950 tracking-tight leading-none lg:leading-[56px] mb-6 font-poppins">
               {lang === "vi" ? (
                 <>
                   <span className="block whitespace-nowrap">Dịch thực đơn.</span>

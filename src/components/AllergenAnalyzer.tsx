@@ -179,7 +179,7 @@ export default function AllergenAnalyzer({ onBackToHome }: { onBackToHome: () =>
           <div className="lg:col-span-7 text-left flex flex-col items-start relative z-10">
 
 
-            <h1 className="text-4xl sm:text-5xl lg:text-[64px] font-semibold text-slate-950 tracking-tight leading-none lg:leading-[64px] mb-6">
+            <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-semibold text-slate-950 tracking-tight leading-none lg:leading-[56px] mb-6">
               <span className="block">
                 {t("Allergen Safety", "An Toàn Dị Ứng", "Allergensicherheit")}
               </span>

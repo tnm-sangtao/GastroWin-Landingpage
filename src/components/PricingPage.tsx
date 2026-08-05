@@ -32,7 +32,7 @@ export default function PricingPage({ onBackToHome, onSelectPlan }: PricingPageP
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           className="text-center max-w-6xl mx-auto mb-4 sm:mb-5"
         >
-          <h1 className="text-3xl sm:text-4xl lg:text-[52px] font-semibold text-slate-950 tracking-tight leading-tight mb-2">
+          <h1 className="text-3xl sm:text-4xl lg:text-[56px] font-semibold text-slate-950 tracking-tight leading-tight mb-2">
             {lang === "vi" ? "Bảng Giá Linh Hoạt Cho Mọi Quy Mô Nhà Hàng" : lang === "de" ? "Flexible Tarife für jede Küchengröße" : "Flexible Tariff Plans For Any Kitchen Size"}
           </h1>
           <p className="text-sm sm:text-base text-slate-500 font-light leading-relaxed max-w-6xl mx-auto">

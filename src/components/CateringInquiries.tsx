@@ -58,7 +58,7 @@ export default function CateringInquiries({ onBackToHome }: CateringInquiriesPro
         className="max-w-md w-full text-center relative z-10 flex flex-col items-center"
       >
         {/* Feature Title */}
-        <h1 className="text-3xl max-w-3xl lg:text-[64px] font-semibold text-slate-900 tracking-tight mb-3 leading-none lg:leading-[64px]">
+        <h1 className="text-3xl max-w-3xl lg:text-[56px] font-semibold text-slate-900 tracking-tight mb-3 leading-none lg:leading-[56px]">
           {pageTranslations.title[lang] || pageTranslations.title.en}
         </h1>
 

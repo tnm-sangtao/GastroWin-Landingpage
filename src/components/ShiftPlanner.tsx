@@ -150,7 +150,7 @@ export default function ShiftPlanner({ onBackToHome }: { onBackToHome: () => voi
           <div className="lg:col-span-7 text-left flex flex-col items-start relative z-10 w-fit">
 
 
-            <h1 className="text-4xl sm:text-5xl lg:text-[64px] font-semibold text-slate-950 tracking-tight leading-none lg:leading-[64px] mb-6">
+            <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-semibold text-slate-950 tracking-tight leading-none lg:leading-[56px] mb-6">
               {t("Collaborative", "Công cụ lập ca", "Effiziente")} <br className="hidden sm:inline" />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600">
                 {t("Shift Planner", "Tối ưu hóa thông minh", "Schichtplanung")}
@@ -208,7 +208,7 @@ export default function ShiftPlanner({ onBackToHome }: { onBackToHome: () => voi
             {/* 3D stage container */}
             <div className="relative w-full max-w-2xl p-0 flex flex-col items-center">
               <img
-                src="https://i.postimg.cc/6Q0hKyx3/Shift-Planner.png"
+                src="https://i.postimg.cc/c1DHRDpY/Shift-Planner-Gastrowin.png"
                 alt="Shift Planner Interface Preview"
                 referrerPolicy="no-referrer"
                 className="w-full h-auto scale-130 drop-shadow-[0_10px_20px_rgba(118,81,252,0.2)]"

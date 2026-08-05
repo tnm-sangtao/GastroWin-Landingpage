@@ -77,7 +77,7 @@ Poppins: 300, 400, 500, 600 (+ italic 400)
 
 | Ngữ cảnh | Size | Weight | Letter Spacing |
 |---|---|---|---|
-| Hero H1 (Heading tại mỗi Hero section trên tất cả page) | `36px → 64px` (responsive `lg:text-[64px]`) | 600 (Semibold) | `-0.02em` |
+| Hero H1 (Heading tại mỗi Hero section trên tất cả page) | `36px → 56px` (responsive `lg:text-[56px]`) | 600 (Semibold) | `-0.02em` |
 | Section H2 (Heading tại mỗi Section ngoại trừ Hero section trên tất cả page) | `28px → 52px` (responsive `lg:text-[52px]`) | 600 (Semibold) | `-0.02em` |
 | Card H3 / Subheading | `18px → 20px` | 500 (Medium) | — |
 | Content / Body text | `16px → 18px` | 400 (Regular) | — |

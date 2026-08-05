@@ -194,7 +194,7 @@ export default function SmartQRMenu({ onBackToHome }: { onBackToHome: () => void
           <div className="lg:col-span-7 text-left flex flex-col items-start relative z-10">
 
 
-            <h1 className="text-4xl sm:text-5xl lg:text-[64px] font-semibold text-slate-950 tracking-tight leading-none lg:leading-[64px] mb-6">
+            <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-semibold text-slate-950 tracking-tight leading-none lg:leading-[56px] mb-6">
               {t("Brand-aligned", "Thực đơn QR", "Markenkonforme")} <br className="hidden sm:inline" />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600">
                 {t("QR menus", "đồng bộ thương hiệu", "QR-Speisekarten")}

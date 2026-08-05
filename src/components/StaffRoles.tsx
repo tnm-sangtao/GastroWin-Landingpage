@@ -142,7 +142,7 @@ export default function StaffRoles({ onBackToHome }: { onBackToHome: () => void 
           <div className="lg:col-span-7 text-left flex flex-col items-start relative z-10">
 
 
-            <h1 className="text-4xl sm:text-5xl lg:text-[64px] font-semibold text-slate-950 tracking-tight leading-none lg:leading-[64px] mb-6">
+            <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-semibold text-slate-950 tracking-tight leading-none lg:leading-[56px] mb-6">
               {t("Smarter staffing.", "Phân bổ nhân sự thông minh.", "Intelligente Personalplanung.")} <br className="hidden sm:inline" />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600">
                 {t("Flexible staff roles.", "Vai trò nhân viên linh hoạt.", "Flexible Mitarbeiterrollen.")}
@@ -180,7 +180,7 @@ export default function StaffRoles({ onBackToHome }: { onBackToHome: () => void 
           {/* Hero Right: Staff Roles Board Preview */}
           <div className="lg:col-span-5 flex justify-center items-center relative py-8">
             <img
-              src="https://i.postimg.cc/7LYjB09c/stafffff.png"
+              src="https://i.postimg.cc/CxbSQJQ9/Staff-Gastro-Win.png"
               alt="Staff Roles Board Preview"
               referrerPolicy="no-referrer"
               className="w-full h-auto scale-135 transform origin-center lg:origin-right transition-all duration-300 drop-shadow-[0_10px_20px_rgba(118,81,252,0.2)]"

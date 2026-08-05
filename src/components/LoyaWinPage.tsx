@@ -9,8 +9,7 @@ const pageTranslations = {
       tag: "Plug-and-Play Loyalty Platform",
       title: "Turn Every Customer Visit Into Lasting Loyalty.",
       desc: "A plug-and-play loyalty platform for retail & F&B. Grow your sales for just €5/month. No complex POS integration required.",
-      ctaPrimary: "Start for €5/mo",
-      ctaSecondary: "Free Trial",
+      ctaPrimary: "Free Trial",
       bullet1: "No POS integration",
       bullet2: "€5 flat-rate",
       bullet3: "Unlimited customers",
@@ -202,8 +201,7 @@ const pageTranslations = {
       tag: "Nền tảng Tích điểm Tiện lợi",
       title: "Biến Mỗi Lượt Ghé Thăm Thành Lòng Trung Thành Lâu Dài.",
       desc: "Nền tảng tích điểm tiện lợi cho bán lẻ & F&B. Tăng doanh thu chỉ từ €5/tháng. Không cần tích hợp POS phức tạp.",
-      ctaPrimary: "Bắt đầu với €5/tháng",
-      ctaSecondary: "Dùng thử miễn phí",
+      ctaPrimary: "Dùng thử miễn phí",
       bullet1: "Không cần tích hợp POS",
       bullet2: "Cước phẳng €5/tháng",
       bullet3: "Không giới hạn khách hàng",
@@ -395,8 +393,7 @@ const pageTranslations = {
       tag: "Plug-and-Play-Kundenbindungsplattform",
       title: "Verwandeln Sie jeden Gästebesuch in dauerhafte Loyalität.",
       desc: "Eine Plug-and-Play-Kundenbindungsplattform für Einzelhandel & F&B. Steigern Sie Ihren Umsatz für nur 5 €/Monat. Keine komplexe POS-Integration.",
-      ctaPrimary: "Starten für 5 €/Monat",
-      ctaSecondary: "Kostenlose Testversion",
+      ctaPrimary: "Kostenlos testen",
       bullet1: "Keine POS-Integration",
       bullet2: "5 € Pauschale",
       bullet3: "Unbegrenzte Kunden",
@@ -618,9 +615,7 @@ export default function LoyaWinPage({ onBackToHome, onOpenDemo }: LoyaWinPagePro
   const [activeTab, setActiveTab] = React.useState<"business" | "customer">("business");
 
   const handleAction = () => {
-    if (onOpenDemo) {
-      onOpenDemo();
-    }
+    window.open("https://app.loyawin.com/", "_blank");
   };
 
   return (
@@ -676,7 +671,7 @@ export default function LoyaWinPage({ onBackToHome, onOpenDemo }: LoyaWinPagePro
                 {text.hero.tag}
               </span>
               <h1 
-                className="mb-5 text-4xl leading-[1.12] font-extrabold tracking-tight sm:text-5xl lg:text-[3.4rem]" 
+                className="mb-5 text-4xl leading-[1.12] font-semibold tracking-tight sm:text-5xl lg:text-[56px]" 
                 style={{ color: "var(--loyawin-neutral-900)", fontFamily: "var(--font-head)" }}
               >
                 {text.hero.title}
@@ -703,16 +698,6 @@ export default function LoyaWinPage({ onBackToHome, onOpenDemo }: LoyaWinPagePro
                     <path d="M5 12h14"></path>
                     <path d="m12 5 7 7-7 7"></path>
                   </svg>
-                </button>
-                <button 
-                  onClick={handleAction}
-                  className="inline-flex items-center gap-2 rounded-full px-7 py-4 text-base font-semibold no-underline transition-all duration-200 hover:bg-slate-50 border-2 cursor-pointer" 
-                  style={{
-                    border: "1.5px solid var(--loyawin-primary)", 
-                    color: "var(--loyawin-primary)"
-                  }}
-                >
-                  {text.hero.ctaSecondary}
                 </button>
               </div>
 

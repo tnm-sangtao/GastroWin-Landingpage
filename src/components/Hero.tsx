@@ -74,7 +74,7 @@ export default function Hero({ onStartTranslating }: HeroProps) {
             {/* Headline */}
             <h1 
               id="hero-headline"
-              className="text-4xl sm:text-5xl lg:text-[64px] font-semibold text-slate-900 tracking-tight leading-none lg:leading-[64px] mb-6"
+              className="text-4xl sm:text-5xl lg:text-[56px] font-semibold text-slate-900 tracking-tight leading-none lg:leading-[56px] mb-6"
             >
               Translate Your <br className="hidden sm:inline" />
               Restaurant Menu with <span className="text-brand relative inline-block">

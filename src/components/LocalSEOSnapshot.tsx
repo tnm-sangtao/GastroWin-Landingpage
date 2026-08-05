@@ -137,7 +137,7 @@ export default function LocalSEOSnapshot({ onBackToHome }: LocalSEOSnapshotProps
           <div className="lg:col-span-7 text-left flex flex-col items-start relative z-10">
 
 
-            <h1 className="text-4xl sm:text-5xl lg:text-[64px] font-semibold text-slate-950 tracking-tight leading-none lg:leading-[64px] mb-6 font-poppins">
+            <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-semibold text-slate-950 tracking-tight leading-none lg:leading-[56px] mb-6 font-poppins">
               {t("Rank higher on", "Xếp hạng cao hơn trên", "Besser ranken auf")} <br className="hidden sm:inline" />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#7553FF] to-purple-800">
                 {t("Google Maps.", "Google Bản đồ.", "Google Maps.")}

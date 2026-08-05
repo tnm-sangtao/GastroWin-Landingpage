@@ -87,7 +87,7 @@ export default function SocialAutoPost({ onBackToHome }: SocialAutoPostProps) {
           <div className="lg:col-span-6 text-left flex flex-col items-start relative z-10">
 
 
-            <h1 className="text-4xl sm:text-5xl lg:text-[64px] font-semibold text-slate-950 tracking-tight leading-none lg:leading-[64px] mb-6">
+            <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-semibold text-slate-950 tracking-tight leading-none lg:leading-[56px] mb-6">
               {t("From kitchen to", "Từ gian bếp đến", "Von der Küche in den")} <br className="hidden sm:inline" />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#7553FF] to-purple-800">
                 {t("Instagram feed", "bảng tin Instagram", "Instagram Feed")}
@@ -240,7 +240,7 @@ export default function SocialAutoPost({ onBackToHome }: SocialAutoPostProps) {
         <div className="w-full flex justify-center items-center py-4">
           <div className="relative w-full max-w-5xl">
             <img 
-              src="https://i.postimg.cc/tJVdqS0N/image.png" 
+              src="https://i.postimg.cc/SK30QM38/Socialpost2gastrowin.png" 
               alt="High-fidelity bistro showcase"
               className="w-full h-auto object-contain transition-all duration-700 group-hover:scale-110 drop-shadow-[0_10px_30px_rgba(118,81,252,0.2)]"
               referrerPolicy="no-referrer"

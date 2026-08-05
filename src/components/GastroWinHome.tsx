@@ -820,7 +820,7 @@ export default function GastroWinHome({
 
 
             {/* Main Typographical Display */}
-            <h1 className="text-4xl sm:text-5xl lg:text-[64px] font-semibold text-slate-950 tracking-tight leading-none lg:leading-[64px] mb-6">
+            <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-semibold text-slate-950 tracking-tight leading-none lg:leading-[56px] mb-6">
               {getTranslation("hero.title1")} <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#7553FF] via-[#7553FF] to-indigo-600">
                 {getTranslation("hero.titleSpan")}
@@ -851,7 +851,7 @@ export default function GastroWinHome({
           <div className="lg:col-span-5 flex justify-center items-center relative z-10 w-full h-full">
             <div className="relative w-full max-w-[560px] overflow-visible transition-transform duration-300 hover:scale-[1.05]">
               <img
-                src="https://i.postimg.cc/90PB3QBS/hero.png"
+                src="https://i.postimg.cc/4x2bjbHK/hero-gastrowin.png"
                 alt="GastroWin Hero"
                 className="w-full h-auto scale-140 object-cover drop-shadow-[0_10px_20px_rgba(118,81,252,0.2)]"
                 referrerPolicy="no-referrer"

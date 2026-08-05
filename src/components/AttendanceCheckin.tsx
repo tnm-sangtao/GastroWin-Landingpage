@@ -148,7 +148,7 @@ export default function AttendanceCheckin({ onBackToHome }: { onBackToHome: () =
           <div className="lg:col-span-7 text-left flex flex-col items-start relative z-10">
 
 
-            <h1 className="text-4xl sm:text-5xl lg:text-[64px] font-semibold text-slate-950 tracking-tight leading-none lg:leading-[64px] mb-6">
+            <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-semibold text-slate-950 tracking-tight leading-none lg:leading-[56px] mb-6">
               {t("Smart Restaurant ", "Chấm công thông minh ", "Smarte Restaurant-")} <br className="hidden sm:inline" />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#7553FF] to-indigo-600">
                 {t("Attendance", "cho nhà hàng", "Zeiterfassung")}

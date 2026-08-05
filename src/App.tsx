@@ -28,6 +28,7 @@ import PricingPage from "./components/PricingPage";
 import ContactPage from "./components/ContactPage";
 import CateringInquiries from "./components/CateringInquiries";
 import LoyaWinPage from "./components/LoyaWinPage";
+import MarketingToolsPage from "./components/MarketingToolsPage";
 import { Sparkles, ArrowRight, ShieldCheck, Play, Utensils, CheckCircle, Cookie, Sliders, ChevronDown, ChevronUp, Info } from "lucide-react";
 import { useLanguage } from "./context/LanguageContext";
 
@@ -186,7 +187,7 @@ const cookieTranslations = {
 
 export default function App() {
   const { lang } = useLanguage();
-  const [currentView, setCurrentView] = useState<"landing" | "tool" | "food-images" | "price-update" | "qr-menu" | "allergen-intel" | "shift-planner" | "attendance-checkin" | "payroll-reconciliation" | "leave-manager" | "staff-roles" | "booking" | "social-auto-post" | "seo-snapshot" | "review-responder" | "campaign-engine" | "pricing" | "contact" | "catering" | "loyawin">("landing");
+  const [currentView, setCurrentView] = useState<"landing" | "tool" | "food-images" | "price-update" | "qr-menu" | "allergen-intel" | "shift-planner" | "attendance-checkin" | "payroll-reconciliation" | "leave-manager" | "staff-roles" | "booking" | "social-auto-post" | "seo-snapshot" | "review-responder" | "campaign-engine" | "pricing" | "contact" | "catering" | "loyawin" | "marketing-tools">("landing");
   const [leadModalOpen, setLeadModalOpen] = useState(false);
   const [leadEmail, setLeadEmail] = useState("");
   const [leadSuccess, setLeadSuccess] = useState(false);
@@ -552,6 +553,10 @@ export default function App() {
           setCurrentView("loyawin");
           window.scrollTo(0, 0);
         }}
+        onNavigateToMarketingTools={() => {
+          setCurrentView("marketing-tools");
+          window.scrollTo(0, 0);
+        }}
       />
 
       {/* Main Content */}
@@ -747,6 +752,13 @@ export default function App() {
               window.scrollTo({ top: 0, behavior: "smooth" });
             }}
             onOpenDemo={handleOpenDemo}
+          />
+        ) : currentView === "marketing-tools" ? (
+          <MarketingToolsPage
+            onBackToHome={() => {
+              setCurrentView("landing");
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
           />
         ) : (
           <InteractiveSandbox 

@@ -75,7 +75,7 @@ export default function Footer({
         <div className="flex flex-col gap-4 max-w-md">
           <h3 className="mb-0">
             <img 
-              src="https://i.postimg.cc/RVr4BXSQ/Gastro.png" 
+              src="https://i.postimg.cc/QdghsT9Z/Gastrowinlogowhite.png" 
               alt="GastroWin" 
               className="h-8 w-auto object-contain brightness-0 invert" 
               referrerPolicy="no-referrer"
