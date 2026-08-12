@@ -262,7 +262,7 @@ export default function AIFoodImages({ onBackToHome }: { onBackToHome: () => voi
           <div className="lg:col-span-5 flex flex-col items-center">
             <div className="w-full max-w-2xl">
               <img
-                src="https://i.postimg.cc/L5SRgN4j/imageai.png"
+                src="https://i.postimg.cc/mgbT6hYG/Image-AI-mascot.png"
                 alt="AI Food Illustration"
                 className="w-full h-auto rounded-xl object-cover scale-115 drop-shadow-[0_10px_20px_rgba(118,81,252,0.2)]"
                 referrerPolicy="no-referrer"

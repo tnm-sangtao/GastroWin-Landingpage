@@ -390,6 +390,16 @@ export default function ContactPage({ onBackToHome }: ContactPageProps) {
                   </div>
                 </div>
               </div>
+
+              {/* Consultation Hero Illustration Image */}
+              <div className="pt-2 relative overflow-hidden rounded-2xl group max-w-[50%]">
+                <img 
+                  src="https://i.postimg.cc/T3SsZMd1/contact.png" 
+                  alt="Get a free consultation" 
+                  className="w-full h-auto object-cover transition-transform duration-300 hover:scale-[1.01]" 
+                  referrerPolicy="no-referrer"
+                />
+              </div>
             </div>
 
             {/* Right Column (Form Card) */}

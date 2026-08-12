@@ -180,7 +180,7 @@ export default function StaffRoles({ onBackToHome }: { onBackToHome: () => void 
           {/* Hero Right: Staff Roles Board Preview */}
           <div className="lg:col-span-5 flex justify-center items-center relative py-8">
             <img
-              src="https://i.postimg.cc/CxbSQJQ9/Staff-Gastro-Win.png"
+              src="https://i.postimg.cc/c1tBJNk0/Staff-mascot.png"
               alt="Staff Roles Board Preview"
               referrerPolicy="no-referrer"
               className="w-full h-auto scale-135 transform origin-center lg:origin-right transition-all duration-300 drop-shadow-[0_10px_20px_rgba(118,81,252,0.2)]"

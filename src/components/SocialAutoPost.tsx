@@ -134,7 +134,7 @@ export default function SocialAutoPost({ onBackToHome }: SocialAutoPostProps) {
             {/* Elegant Hero Image Frame */}
             <div className="relative w-full max-w-2xl lg:max-w-[760px] xl:max-w-[820px]">
               <img 
-                src="https://i.postimg.cc/4dzK3rLD/marketing.png" 
+                src="https://i.postimg.cc/T2NmxLdF/social-mascot.png" 
                 alt="Professional food preparation and social feed"
                 className="w-full h-auto object-contain scale-110 transition-all duration-300 hover:scale-115 drop-shadow-[0_10px_30px_rgba(118,81,252,0.15)]"
                 referrerPolicy="no-referrer"

@@ -171,11 +171,12 @@ export default function Navbar({ onScrollToSection, onOpenDemo, currentView, onN
   const isProductActive = currentView && [
     "tool", "food-images", "price-update", "qr-menu", "allergen-intel", 
     "shift-planner", "attendance-checkin", "payroll-reconciliation", 
-    "leave-manager", "staff-roles", "booking"
+    "leave-manager", "staff-roles", "booking",
+    "social-auto-post", "seo-snapshot", "review-responder", "campaign-engine"
   ].includes(currentView);
 
   const isEcosystemActive = currentView && [
-    "marketing-tools", "social-auto-post", "seo-snapshot", "review-responder", "campaign-engine", "loyawin"
+    "marketing-tools", "loyawin"
   ].includes(currentView);
 
   const isPricingActive = currentView === "pricing";

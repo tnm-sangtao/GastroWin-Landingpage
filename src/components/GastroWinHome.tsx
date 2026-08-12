@@ -851,7 +851,7 @@ export default function GastroWinHome({
           <div className="lg:col-span-5 flex justify-center items-center relative z-10 w-full h-full">
             <div className="relative w-full max-w-[560px] overflow-visible transition-transform duration-300 hover:scale-[1.05]">
               <img
-                src="https://i.postimg.cc/4x2bjbHK/hero-gastrowin.png"
+                src="https://i.postimg.cc/26v2bRjz/Hero-mascot.png"
                 alt="GastroWin Hero"
                 className="w-full h-auto scale-140 object-cover drop-shadow-[0_10px_20px_rgba(118,81,252,0.2)]"
                 referrerPolicy="no-referrer"
@@ -877,13 +877,13 @@ export default function GastroWinHome({
             <div className="lg:col-span-5 flex justify-center items-center w-full order-2 lg:order-1">
               <div className="relative w-full max-w-[500px]">
                 <img
-                  src="https://i.postimg.cc/C1D1GVnL/trouble1.png"
+                  src="https://i.postimg.cc/Bb7LJtWD/trouble-mascot.png"
                   alt="GastroWin Challenge"
                   className="w-full h-auto object-contain scale-115 origin-bottom"
                   referrerPolicy="no-referrer"
                 />
                 {/* Gradient mask to blend bottom of image into the background */}
-                <div className="absolute bottom-[-10%] left-[-10%] right-[-10%] h-28 bg-gradient-to-t from-[#f8f7ff] via-[#f8f7ff] to-transparent pointer-events-none z-10" />
+                <div className="absolute bottom-[-10%] left-[-10%] right-[-10%] h-28" />
               </div>
             </div>
 

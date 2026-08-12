@@ -182,7 +182,7 @@ export default function LocalSEOSnapshot({ onBackToHome }: LocalSEOSnapshotProps
             {/* Beautiful Image Container */}
             <div className="relative w-full max-w-md">
               <img
-                src="https://i.postimg.cc/jdGZb5cd/SEO.png"
+                src="https://i.postimg.cc/sDw3q732/SEO-mascot.png"
                 alt="Local SEO Audit Illustration"
                 className="w-full h-auto rounded-xl object-cover scale-130 drop-shadow-[0_10px_20px_rgba(118,81,252,0.2)]"
                 referrerPolicy="no-referrer"

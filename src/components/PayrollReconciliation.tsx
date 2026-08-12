@@ -64,7 +64,7 @@ export default function PayrollReconciliation({ onBackToHome }: { onBackToHome: 
             </div>
 
             {/* Quick stats panel */}
-            <div className="grid grid-cols-2 gap-6 mt-12 pt-8 border-t border-slate-100 w-full text-left">
+            <div className="grid grid-cols-2 gap-6 mt-12 pt-8 w-full text-left">
               <div>
                 <p className="text-2xl font-light text-slate-950">100%</p>
                 <p className="text-sm font-light text-slate-900 uppercase tracking-wider mt-1">Tax Audit Compliant</p>
@@ -79,7 +79,7 @@ export default function PayrollReconciliation({ onBackToHome }: { onBackToHome: 
           {/* Hero Right: Payroll Preview Image */}
           <div className="lg:col-span-5 flex justify-center items-center relative py-8">
             <img
-              src="https://i.postimg.cc/0NGFMphr/Payroll.png"
+              src="https://i.postimg.cc/6p6RdrQN/Payroll-mascot.png"
               alt="Payroll Dual-Ledger Preview"
               referrerPolicy="no-referrer"
               className="w-full h-auto scale-125 transform origin-center lg:origin-right transition-all duration-300 drop-shadow-[0_10px_20px_rgba(118,81,252,0.2)]"

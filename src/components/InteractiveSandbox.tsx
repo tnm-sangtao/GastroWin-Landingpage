@@ -406,7 +406,7 @@ export default function InteractiveSandbox({ onBackToHome }: InteractiveSandboxP
             <div className="relative w-full max-w-md">
               <img 
                 id="hero-translatemenu-image"
-                src="https://i.postimg.cc/50cx5x9w/translatemenu.png" 
+                src="https://i.postimg.cc/bvhwP3c1/translate-mascot.png" 
                 alt="GastroWin Menu Translator Interface" 
                 className="w-full h-auto object-cover scale-145 drop-shadow-[0_10px_20px_rgba(118,81,252,0.2)]"
                 referrerPolicy="no-referrer"

@@ -208,7 +208,7 @@ export default function ShiftPlanner({ onBackToHome }: { onBackToHome: () => voi
             {/* 3D stage container */}
             <div className="relative w-full max-w-2xl p-0 flex flex-col items-center">
               <img
-                src="https://i.postimg.cc/c1DHRDpY/Shift-Planner-Gastrowin.png"
+                src="https://i.postimg.cc/L5DCvh69/Shiftplanner-Mascot.png"
                 alt="Shift Planner Interface Preview"
                 referrerPolicy="no-referrer"
                 className="w-full h-auto scale-130 drop-shadow-[0_10px_20px_rgba(118,81,252,0.2)]"

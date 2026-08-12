@@ -239,7 +239,7 @@ export default function SmartQRMenu({ onBackToHome }: { onBackToHome: () => void
             {/* Beautiful Image Container */}
             <div className="relative w-full max-w-xl">
               <img
-                src="https://i.postimg.cc/DfsFQYHM/QRMenus.png"
+                src="https://i.postimg.cc/wTzy5XjZ/Qrmenu-mascot.png"
                 alt="QR Menu Illustration"
                 className="w-full h-auto rounded-xl object-cover scale-135 drop-shadow-[0_10px_20px_rgba(118,81,252,0.2)]"
                 referrerPolicy="no-referrer"

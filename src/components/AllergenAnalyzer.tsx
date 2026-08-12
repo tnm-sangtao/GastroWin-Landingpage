@@ -231,7 +231,7 @@ export default function AllergenAnalyzer({ onBackToHome }: { onBackToHome: () =>
             {/* Beautiful Image Container */}
             <div className="relative w-full max-w-lg">
               <img
-                src="https://i.postimg.cc/8zRg6xnN/Allergen.png"
+                src="https://i.postimg.cc/3JZB2JYf/Allergen-mascot.png"
                 alt="Allergen Analyzer Illustration"
                 className="w-full h-auto rounded-xl object-cover scale-140 drop-shadow-[0_10px_20px_rgba(118,81,252,0.2)]"
                 referrerPolicy="no-referrer"

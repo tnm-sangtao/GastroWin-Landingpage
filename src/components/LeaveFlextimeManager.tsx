@@ -190,7 +190,7 @@ export default function LeaveFlextimeManager({ onBackToHome }: { onBackToHome: (
           {/* Hero Right: Leave Manager Preview Image */}
           <div className="lg:col-span-5 flex justify-center items-center relative py-8">
             <img
-              src="https://i.postimg.cc/h4YxmNLL/Leaveeee.png"
+              src="https://i.postimg.cc/GpYyvvVw/Leave-mascot.png"
               alt="Leave and Flextime Manager Preview"
               referrerPolicy="no-referrer"
               className="w-full h-auto scale-125 transform origin-center lg:origin-right transition-all duration-300 drop-shadow-[0_10px_20px_rgba(118,81,252,0.2)]"

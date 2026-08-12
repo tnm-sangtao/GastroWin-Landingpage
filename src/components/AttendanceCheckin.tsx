@@ -182,7 +182,7 @@ export default function AttendanceCheckin({ onBackToHome }: { onBackToHome: () =
           {/* Hero Right: Check-in Terminal Preview Image */}
           <div className="lg:col-span-5 flex justify-center items-center relative">
             <img
-              src="https://i.postimg.cc/wvcJLBkM/checkinccc.png"
+              src="https://i.postimg.cc/VvhBLmpV/Checkin-mascot.png"
               alt="Attendance Check-in Preview"
               referrerPolicy="no-referrer"
               className="w-full h-auto scale-145 transform origin-center lg:origin-right transition-all duration-300 drop-shadow-[0_10px_20px_rgba(118,81,252,0.2)]"

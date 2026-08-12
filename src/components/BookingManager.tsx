@@ -222,10 +222,11 @@ export default function BookingManager({ onBackToHome }: { onBackToHome: () => v
 
 
             <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-semibold text-slate-950 tracking-tight leading-none lg:leading-[56px] mb-6">
-              {t("Flawless table bookings &", "Đặt bàn hoàn hảo &", "Nahtlose Tischbuchung &")} <br className="hidden sm:inline" />
+              {t("Smart Table Bookings.", "Đặt Bàn Thông Minh.", "Smarte Tischbuchungen.")}{" "}
+              <br className="hidden sm:inline" />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#7553FF] to-indigo-600">
-                {t("Zero Overbooking", "Không trùng bàn", "Keine Überbuchung")}
-              </span>.
+                {t("Zero Overbooking.", "Không Trùng Bàn.", "Keine Überbuchung.")}
+              </span>
             </h1>
 
             <p className="text-sm sm:text-base text-slate-900 font-light leading-relaxed mb-8 max-w-lg">
@@ -265,7 +266,7 @@ export default function BookingManager({ onBackToHome }: { onBackToHome: () => v
             <div className="relative w-full max-w-lg">
               <img 
                 id="hero-bookatable-image"
-                src="https://i.postimg.cc/J0PDqkkR/bookatable.png" 
+                src="https://i.postimg.cc/Wz9nxM2v/Book-a-table-mascot.png" 
                 alt="GastroWin Book a Table Interface" 
                 className="w-full h-auto object-cover scale-145 drop-shadow-[0_10px_20px_rgba(118,81,252,0.2)]"
                 referrerPolicy="no-referrer"

@@ -287,7 +287,7 @@ export default function PriceUpdater({ onBackToHome }: { onBackToHome: () => voi
             {/* Beautiful Image Container */}
             <div className="relative w-full max-w-lg">
               <img
-                src="https://i.postimg.cc/zvWqYjfS/Updatemenugastrowin.png"
+                src="https://i.postimg.cc/90T9YZrD/updatemenu-mascot.png"
                 alt="Price Update Illustration"
                 className="w-full h-auto rounded-xl object-cover scale-135 drop-shadow-[0_10px_20px_rgba(118,81,252,0.2)]"
                 referrerPolicy="no-referrer"
